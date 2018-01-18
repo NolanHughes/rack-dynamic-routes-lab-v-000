@@ -15,6 +15,10 @@ class Application
       resp.status = 404
     end
 
+    def find_item(item_name)
+      item.price = @@items
+    end
+
     resp.finish
   end
 end
