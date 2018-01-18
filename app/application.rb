@@ -15,7 +15,7 @@ class Application
 
     def find_item(item_name)
       binding.pry
-      item = @@items.find {|item| item.name = item_name }
+      item = @@items.find {|item| item.name == item_name }
       item.price
     end
 
