@@ -5,6 +5,8 @@ class Application
 
      if req.path.match(/items/)
       resp.write "You requested an item"
+      item = req.params["item"]
+      item
     else
       resp.write "Route not found"
       resp.status = 404
