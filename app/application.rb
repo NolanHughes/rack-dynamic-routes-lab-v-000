@@ -9,7 +9,7 @@ class Application
       # resp.write "You requested an item"
       binding.pry
       item_name = req.path.split("/items/").last
-      find_item(item_name)
+      resp.write find_item(item_name)
     else
       resp.write "Route not found"
       resp.status = 404
