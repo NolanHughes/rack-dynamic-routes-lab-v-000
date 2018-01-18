@@ -6,8 +6,6 @@ class Application
     req = Rack::Request.new(env)
 
      if req.path.match(/items/)
-      # resp.write "You requested an item"
-      binding.pry
       item_name = req.path.split("/items/").last
       resp.write find_item(item_name)
     else
