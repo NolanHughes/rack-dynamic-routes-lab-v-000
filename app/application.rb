@@ -18,8 +18,8 @@ class Application
       item = @@items.find {|item| item.name == item_name }
       if item
         item.price
-      else
-        "Item not found"
+      # else
+      #   "Item not found"
       end
     end
 
