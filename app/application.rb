@@ -19,6 +19,7 @@ class Application
         item.price
       else
         "Item not found"
+        resp.status = 400
       end
     end
 
