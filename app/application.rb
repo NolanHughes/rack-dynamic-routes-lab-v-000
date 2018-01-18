@@ -16,7 +16,8 @@ class Application
     end
 
     def find_item(item_name)
-      item.price = @@items
+      item = @@items.find {|item| item.name = item_name }
+      item.price
     end
 
     resp.finish
