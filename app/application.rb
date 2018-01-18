@@ -10,6 +10,8 @@ class Application
       binding.pry
       item = req.params["item"]
       if @@items.include?(item.name)
+        "hey"
+      end
     else
       resp.write "Route not found"
       resp.status = 404
