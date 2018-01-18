@@ -19,7 +19,6 @@ class Application
       if item
         item.price
       end
-      item.price
     end
 
     resp.finish
