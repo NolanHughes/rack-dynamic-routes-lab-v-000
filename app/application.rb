@@ -8,10 +8,8 @@ class Application
      if req.path.match(/items/)
       # resp.write "You requested an item"
       binding.pry
-      item = req.params["items"]
-      if @@items.include?(item.name)
-        "hey"
-      end
+      item_name = req.path.split("/items/").last
+      find_item(item_name)
     else
       resp.write "Route not found"
       resp.status = 404
