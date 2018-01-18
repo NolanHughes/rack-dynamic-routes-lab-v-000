@@ -5,6 +5,7 @@ class Application
 
      if req.path.match(/items/)
       resp.write "You requested an item"
+      binding.pry
       item = req.params["item"]
       if @@items.include?(item.name)
     else
