@@ -7,6 +7,7 @@ class Application
 
      if req.path.match(/items/)
       item_name = req.path.split("/items/").last
+      binding.pry
       resp.write find_item(item_name)
     else
       resp.write "Route not found"
