@@ -14,7 +14,7 @@ class Application
     end
 
     def find_item(item_name)
-      item = @@items.find {|item| item.name == item_name }.price
+      item = @@items.find {|item| item.name == item_name }
       if item
         item.price
       end
