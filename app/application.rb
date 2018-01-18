@@ -8,7 +8,11 @@ class Application
      if req.path.match(/items/)
       item_name = req.path.split("/items/").last
       binding.pry
-      resp.write find_item(item_name)
+      if find_item(item_name)
+        resp.write find_item(item_name)
+      else
+        resp.write "Item not found"
+        resp.status = 400
     else
       resp.write "Route not found"
       resp.status = 404
